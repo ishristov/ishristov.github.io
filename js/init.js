@@ -109,7 +109,6 @@
        removalDelay: 200,
        showCloseBtn: false,
        mainClass: 'mfp-fade'
-
     });
 
     $(document).on('click', '.popup-modal-dismiss', function (e) {
@@ -117,6 +116,10 @@
     		$.magnificPopup.close();
     });
 
+    $(document).on('mouseover touchstart', '.portfolio-item a', function (e) {
+       var $img = $($(this).attr('href')).find('img')
+       $img.attr('src', $img.attr('data-src'))
+    })
 
 /*----------------------------------------------------*/
 /*	Flexslider
