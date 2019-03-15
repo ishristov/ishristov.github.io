@@ -135,4 +135,25 @@
       animationSpeed: 600,
       randomize: false,
    });
+
+/*----------------------------------------------------*/
+/*	Resume expander
+/*----------------------------------------------------*/
+   $(document).on('click', '.resume-expander', function (e) {
+      var $trigger = $(this)
+      var $parent = $(this).parents('.row')
+
+      $parent.find('.main-col').stop(true, false).animate({
+         height: 'toggle',
+         opacity: 'toggle'
+      }, {
+         start: function () {
+            $trigger.toggleClass('trigger-collapsed')
+         },
+         always: function () {
+            $parent.toggleClass('resume-collapsed')
+         },
+         duration: 1000
+      })
+   })
 });
