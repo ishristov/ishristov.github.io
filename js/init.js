@@ -134,6 +134,7 @@
       slideshowSpeed: 7000,
       animationSpeed: 600,
       randomize: false,
+      touch: true
    });
 
 /*----------------------------------------------------*/
